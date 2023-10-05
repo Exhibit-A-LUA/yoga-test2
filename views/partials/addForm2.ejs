@@ -1,0 +1,125 @@
+<div class="form create-student content container">
+  <div class="text">Add Student</div>
+  <form action="/students" method="POST">
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id="num" name="num" placeholder=" " required>
+        <div class="cut underline"></div>
+        <label for="num" class="placeholder">Student Number</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <input class="input" type="text" id="name" name="name" placeholder=" " required>
+        <div class="cut underline"></div>
+        <label for="name" class="placeholder">Student Name</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="text" id="email" name="email" placeholder=" " required>
+        <div class="cut underline"></div>
+        <label for="email" class="placeholder">Student email</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <select  class="input" id="sType" name="sType" placeholder=" " required>
+          <div class="cut underline"></div>
+          <label for="sType" class="placeholder">Choose Student Type</label>
+          <option value="yoga" selected>Yoga</option>
+          <option value="work">Work</option>
+          <option value="charity">Charity</option>
+          <option value="course">Course</option>
+          <option value="court">Court</option>
+          <option value="doctor">Doctor</option>
+          <option value="holiday">Holiday</option>
+          <option value="kids">Kids</option>
+          <option value="sick">Charity</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="tel" id="phone" name="phone" placeholder="" required/>
+        <div class="underline"></div>
+        <label for="phone" class="placeholder">Phone</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <select class="input" id="package" name="package"  placeholder="" required>
+          <div class="underline"></div>
+          <label for="package" class="placeholder">Package</label>
+          <option value="1">one off</option>
+          <option value="8">8 per month</option>
+          <option value="12" selected>12 per month</option>
+          <option value="16">16 per month</option>
+          <option value="20">20 per month</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-checkbox ic1 input-data">
+        <label for="wk" class="checkbox-label">Days of Week</label>
+      </div>
+        <label for="mon" class="checkbox-label">Mo </label>
+        <input type="checkbox" id="mon" name="mon" value="1" class="checkbox">
+        <label for="tue" class="checkbox-label">Tu </label>
+        <input type="checkbox" id="tue" name="tue" value="2" class="checkbox">
+        <label for="wed" class="checkbox-label">We </label>
+        <input type="checkbox" id="wed" name="wed" value="3" class="checkbox">
+        <label for="thu" class="checkbox-label">Th </label>
+        <input type="checkbox" id="thu" name="thu" value="4" class="checkbox">
+        <label for="fri" class="checkbox-label">Fr </label>
+        <input type="checkbox" id="fri" name="fri" value="5" class="checkbox">
+        <label for="sat" class="checkbox-label">Sa </label>
+        <input type="checkbox" id="sat" name="sat" value="6" class="checkbox">
+        <label for="sun" class="checkbox-label">Su </label>
+        <input type="checkbox" id="sun" name="sun" value="7" class="checkbox">
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id="colour" name="colour" placeholder="" required/>
+        <div class="cut underline"></div>
+        <label for="colour" class="placeholder">Student Colour</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id = "startYr" name="startYr" placeholder="" required/>
+        <div class="cut underline"></div>
+        <label for="startYr" class="placeholder">Start Year</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id="startMth" name="startMth" placeholder="" required/>
+        <div class="cut underline"></div>
+        <label for="startMth" class="placeholder">Start Month</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id="startDay" name="startDay" placeholder="" required/>
+        <div class="cut underline"></div>
+        <label for="startDay" class="placeholder">Start Day</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="text" id="birthday" name="birthday" placeholder="" required/>
+        <div class="cut underline"></div>
+        <label for="birthday" class="placeholder">Birthday Notes</label>
+      </div>
+      <div class="input-container ic1 input-data">
+        <input class="input" type="number" id="classesNishCancelled" name="classesNishCancelled"  placeholder="" value="0" required/>
+        <div class="cut underline"></div>
+        <label for="classesNishCancelled" class="placeholder">Classes Nish Cancelled</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <input class="input" type="file" id="studentImageFileName" name="studentImageFileName" />
+        <div class="cut underline"></div>
+        <label for="studentImageFileName" class="placeholder">Select Image</label>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="input-container ic1 input-data">
+        <button type="text" class="submit">Submit</button>
+      </div>
+    </div>
+
+  </form>
+</div>

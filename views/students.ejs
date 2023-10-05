@@ -1,0 +1,36 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+  <div class="students content">
+    <h2 class = "title"><%= title %></h2>
+
+    <% if (students.length > 0 ) { %>
+      <% students.forEach(student => { %>
+        <a class='single' href="/students/<%= student._id %>">
+          <h3 class = "subtitle"><%= student.name %></h3>
+          <p>
+            <span class = "">Num: <%= student.num %>,</span>
+            <span class = ""> Email: <%= student.email %>,</span>
+            <span class = ""> Phone: <%= student.phone %>,</span>
+            <span class = ""> sType: <%= student.sType %>,</span>
+            <span class = ""> Pkg: <%= student.package %>,</span>
+            <span class = ""> Colour: <%= student.colour %>,</span>
+            <span class = ""> Start: <%= student.startDay %>/</span>
+            <span class = ""><%= student.startMth %>/</span>
+            <span class = ""><%= student.startYr %>,</span>
+            <span class = ""> Birthday: <%= student.birthday %>,</span>
+            <span class = ""> Image: <%= student.studentImageFileName %></span>
+          </p>
+        </a>
+      <% }) %>
+    <% } else {%>
+      <p>There are no students to display</p>
+    <% } %>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

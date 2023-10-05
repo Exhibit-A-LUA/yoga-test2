@@ -1,0 +1,33 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+
+  <div class="students content">
+    <h2 class = "title"><%= title %></h2>
+
+    <% if (stuclasses.length > 0 ) { %>
+      <% stuclasses.forEach(stuclass => { %>
+        <a class='single' href="/stu-classes/<%= stuclass._id %>">
+          <h3 class = "subtitle"><%= stuclass.date %>/<%= stuclass.month %>/<%= stuclass.year %></h3>
+          <p>
+            <span class = "">Time <%= stuclass.hour %>:<%= stuclass.min %>,</span>
+            <span class = ""> Length <%= stuclass.length %>,</span>
+            <span class = ""> Stu Num <%= stuclass.num %>,</span>
+            <span class = ""> Name <%= stuclass.name %>,</span>
+            <span class = ""> Status <%= stuclass.status %>,</span>
+            <span class = ""> Paid <%= stuclass.paid %>,</span>
+            <span class = ""> Class <%= stuclass.class %>,</span>
+            <span class = ""> Package <%= stuclass.pkg %></span>
+          </p>
+        </a>
+      <% }) %>
+    <% } else {%>
+      <p>There are no classes to display</p>
+    <% } %>
+  </div>
+  <%- include('./partials/footer.ejs') %>
+</body>
+</html>

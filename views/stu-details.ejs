@@ -1,0 +1,44 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+  <%- include('./partials/nav.ejs') %>  
+
+  <div class="details content">
+    <h2><%= student.name %></h2>
+    <div class="content">
+      <p>
+        <span class = "">Num: <%= student.num %>,</span>
+        <span class = ""> Email: <%= student.email %>,</span>
+        <span class = ""> Phone: <%= student.phone %>,</span>
+        <span class = ""> sType: <%= student.sType %>,</span>
+        <span class = ""> Pkg: <%= student.package %>,</span>
+        <span class = ""> Colour: <%= student.colour %>,</span>
+        <span class = ""> Start: <%= student.startDay %>/</span>
+        <span class = ""><%= student.startMth %>/</span>
+        <span class = ""><%= student.startYr %>,</span>
+        <span class = ""> Birthday: <%= student.birthday %>,</span>
+        <span class = ""> Image: <%= student.studentImageFileName %></span>
+
+      </p>
+    </div>
+    <a class="delete" data-doc="<%= student._id %>">delete</a>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+
+  <script>
+    const trashcan = document.querySelector('a.delete');
+    trashcan.addEventListener('click', (e) => {
+      const endpoint = `/students/${trashcan.dataset.doc}`;
+      fetch(endpoint, {
+        method: 'DELETE'
+      })
+      .then((response) => response.json())
+      .then((data) => window.location.href = data.redirect)
+      .catch((err) => {
+        console.log(err);
+      })
+    })
+  </script>
+</body>
+</html>
